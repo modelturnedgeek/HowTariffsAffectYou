@@ -1,0 +1,82 @@
+.gantt-container {
+  overflow: hidden;
+}
+
+.gantt-header {
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  z-index: 10;
+}
+
+.gantt-timeline {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.gantt-tasks {
+  overflow-y: auto;
+}
+
+.task-bar {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.task-bar:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.task-bar.selected {
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.dependency-line {
+  stroke: #6b7280;
+  stroke-width: 2;
+  fill: none;
+  marker-end: url(#arrow);
+}
+
+.timeline-grid-line {
+  stroke: #f3f4f6;
+  stroke-width: 1;
+}
+
+.timeline-today-line {
+  stroke: #ef4444;
+  stroke-width: 2;
+}
+
+.drag-handle {
+  cursor: ew-resize;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task-bar:hover .drag-handle {
+  opacity: 1;
+}
+
+.sidebar-transition {
+  transition: all 0.3s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
